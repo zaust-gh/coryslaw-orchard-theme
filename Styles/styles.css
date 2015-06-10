@@ -1,0 +1,755 @@
+/* css reset */
+body, header, footer, nav, section, aside, article,
+div, ol, ul, dl, li, lh, dt, dd, del, dfn, abbr, cite,
+form, fieldset, legend, label, input, select, textarea, button, .button, button.negative,
+.button-negative,
+p, blockquote, address, table, th, td, pre, code,
+span, img, strong, em, a, h1, h2, h3, h4, h5, h6, sub, sup {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  background: transparent;
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-size: inherit;
+  line-height: 1.5;
+}
+
+html {
+  position: relative;
+  z-index: 0;
+  overflow-y: scroll;
+}
+
+body {
+  position: relative;
+  z-index: 1;
+  color: #1e2022;
+  background: white;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  border: 0;
+  -ms-interpolation-mode: antialiased;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+table th, table td {
+  vertical-align: middle;
+}
+
+ul, ol, dd {
+  list-style-position: outside;
+}
+
+ul ul, ol ul, dd ul {
+  list-style-type: circle;
+}
+
+ul li, ol li, dd li {
+  margin-left: 2em;
+}
+
+ol {
+  list-style-type: decimal;
+  list-style-position: outside;
+}
+
+ol ol {
+  list-style-type: lower-roman;
+}
+
+dl dt, dl lh {
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  padding: 6px;
+  *padding: 3px 6px;
+  *height: 20px;
+}
+
+button, .button, button.negative,
+.button-negative {
+  padding: 5px 12px;
+  *padding: 3px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  input,
+  select,
+  textarea {
+    padding: 4px;
+  }
+}
+
+fieldset {
+  border: 0;
+}
+
+.fieldset-block label {
+  width: auto;
+  padding-bottom: 0;
+  direction: ltr;
+  text-indent: 0;
+}
+
+.fieldset-block input,
+.fieldset-block select,
+.fieldset-block textarea {
+  clear: left;
+  width: 100%;
+}
+
+.fieldset-block .field, .fieldset-block .field-indent, .fieldset-block .field-button, .fieldset-block .field-radio, .fieldset-block .field-checkbox, .fieldset-block form .field-address, form .fieldset-block .field-address, .fieldset-block .field-inline, .fieldset-block form .field-multiselect, form .fieldset-block .field-multiselect {
+  margin: 0;
+}
+
+.fieldset-block .field-button {
+  margin-top: 6.667px;
+  margin-left: 0;
+}
+
+.field, .field-indent, .field-button, .field-radio, .field-checkbox, form .field-address, .field-inline, form .field-multiselect {
+  *zoom: 1;
+  clear: left;
+  margin: 0 0 10px;
+}
+
+.field:after, .field-indent:after, .field-button:after, .field-radio:after, .field-checkbox:after, form .field-address:after, .field-inline:after, form .field-multiselect:after {
+  visibility: hidden;
+  display: block;
+  content: "\0020";
+  height: 0;
+  clear: both;
+}
+
+.field .description, .field-indent .description, .field-button .description, .field-radio .description, .field-checkbox .description, form .field-address .description, .field-inline .description, form .field-multiselect .description {
+  display: block;
+  clear: left;
+  margin: 3px 0;
+  margin-left: 120px;
+  font-size: 90%;
+}
+
+.field-indent, .field-button, .field-radio, .field-checkbox, form .field-address {
+  margin-left: 120px;
+}
+
+.field-indent .description, .field-button .description, .field-radio .description, .field-checkbox .description, form .field-address .description {
+  margin-left: 0;
+}
+
+.field-inline {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  *zoom: 1;
+  *display: inline;
+  clear: none;
+  margin-right: 10px;
+}
+
+.field-inline label {
+  text-indent: 12px;
+}
+
+.field-button button, .field-button .button, .field-button button.negative, .field-button
+.button-negative {
+  margin-right: 10px;
+}
+
+.field-radio, .field-checkbox {
+  clear: none;
+}
+
+.field-radio input, .field-checkbox input {
+  width: auto;
+  margin: 10px 0 0 0;
+  *margin: 7px 0 0 0;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+}
+
+.field-radio label, .field-checkbox label {
+  margin-right: 10px;
+  direction: ltr;
+  text-indent: 6px;
+}
+
+.field-radio label.title, .field-checkbox label.title {
+  margin-left: -120px;
+  margin-right: 0;
+  direction: rtl;
+  text-indent: 18px;
+}
+
+.field-radio .description, .field-checkbox .description {
+  margin-left: 0;
+}
+
+label {
+  *display: inline;
+  float: left;
+  width: 120px;
+  padding: 8px 0;
+  font-weight: bold;
+  direction: rtl;
+  text-indent: 18px;
+  cursor: pointer;
+}
+
+label.auto {
+  width: auto;
+}
+
+label.join {
+  width: auto;
+  padding-left: 12px;
+  padding-right: 12px;
+  text-indent: 0;
+  direction: ltr;
+}
+
+input,
+select,
+textarea,
+button,
+.button,
+button.negative,
+
+.button-negative {
+  *display: inline;
+  float: left;
+  -webkit-background-clip: padding-box;
+  -webkit-border-top-left-radius: 2px;
+  -webkit-border-top-right-radius: 2px;
+  -webkit-border-bottom-left-radius: 2px;
+  -webkit-border-bottom-right-radius: 2px;
+  -khtml-border-radius: 2px 2px 2px 2px;
+  -moz-border-radius: 2px 2px 2px 2px;
+  border-radius: 2px 2px 2px 2px;
+  -moz-box-shadow: inset rgba(30, 32, 34, 0.2) 0 1px 2px;
+  -webkit-box-shadow: inset rgba(30, 32, 34, 0.2) 0 1px 2px;
+  box-shadow: inset rgba(30, 32, 34, 0.2) 0 1px 2px;
+  display: block;
+  width: 280px;
+  margin: 3px 0;
+  background-color: #f0f1f2;
+  border: 1px solid #7e868e;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus,
+.button:focus,
+button.negative:focus,
+
+.button-negative:focus {
+  outline: 0;
+  background-color: white;
+}
+
+select {
+  -moz-box-shadow: inset black 0 0 0;
+  -webkit-box-shadow: inset black 0 0 0;
+  box-shadow: inset black 0 0 0;
+  height: 29px;
+  *margin: 6px 0;
+  cursor: pointer;
+}
+
+textarea {
+  height: 90px;
+}
+
+button, .button, button.negative,
+.button-negative {
+  -webkit-background-clip: padding-box;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -khtml-border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  border-radius: 3px 3px 3px 3px;
+  *display: inline;
+  float: left;
+  width: auto;
+  color: white;
+  background-color: #1e2022;
+  font-weight: bold;
+  border: 0;
+  cursor: pointer;
+  *font-size: 98%;
+}
+
+button:hover, .button:hover, button.negative:hover,
+.button-negative:hover, button:focus, .button:focus, button.negative:focus,
+.button-negative:focus {
+  background-color: #36393d;
+  text-decoration: underline;
+}
+
+.button, button.negative, .negative.button,
+.button-negative {
+  padding: 5.94px 9px;
+  text-decoration: none;
+}
+
+.button:visited, button.negative:visited, .negative.button:visited,
+.button-negative:visited {
+  color: white;
+}
+
+h1 {
+  font-size: 42px;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 400;
+  text-transform:uppercase;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+h4 {
+  font-size: 22px;
+  font-weight: 300;
+  text-transform:lowercase;
+}
+
+h5, h6 {
+  font-size: 12px;
+}
+
+h6 {
+  font-weight: normal;
+}
+
+a, a:visited, a:active {
+    color: #019875;
+    text-decoration: none;
+}
+
+a:hover 
+{
+    color: #019875;
+    text-decoration: underline;
+}
+
+p a, p strong, p span, p em {
+  font-size: inherit;
+}
+
+abbr, dfn {
+  text-transform: uppercase;
+  border-bottom: 1px dotted #1e2022;
+  cursor: help;
+}
+
+code, pre, var {
+  font-family: "Monaco", "Courier", monospace;
+  font-size: 10px;
+  white-space: pre;
+}
+
+sub {
+  font-size: smaller;
+  vertical-align: sub;
+}
+
+sup {
+  font-size: smaller;
+  vertical-align: super;
+}
+
+[unselectable=true],
+[unselectable] {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+[unselectable=false] {
+  -moz-user-select: auto;
+  -webkit-user-select: auto;
+}
+
+p {
+  -moz-user-select: auto;
+  -webkit-user-select: auto;
+    color: ##535353;
+    font-weight: 300;
+	line-height: 1.8;
+    margin: 2px 0; 
+}
+
+section {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+header.page-header section {
+    border-bottom: 1px solid #019875;
+}
+
+header.page-header a
+{
+    font-size: 28px;
+    text-decoration: none;
+}
+
+footer {
+  clear: both;
+  margin-top: 40px;
+}
+
+#main-footer {
+	height: 55px;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+#main-footer section {
+	border-top: 1px solid #019875;
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+    margin-bottom: 0;
+    padding-top: 20px;
+    text-align: center;
+}
+
+
+#main-footer ul li {
+    display: inline;
+    list-style-type: none;
+    margin-left: 1em;
+    padding: 10px 0px 10px 40px;
+}
+
+li.ico-facebook {
+    background: url('../img/social/32x32px/facebook.png') no-repeat top left;
+}
+
+li.ico-twitter {
+    background: url('../img/social/32x32px/twitter.png') no-repeat top left;
+}
+
+li.ico-linkedin {
+    background: url('../img/social/32x32px/linkedin.png') no-repeat top left;
+}
+
+li.ico-github {
+    background: url('../img/social/32x32px/github.png') no-repeat top left;
+}
+
+.ico-instagram {
+    background: url('../img/social/32x32px/instagram.png') no-repeat top left;
+}
+
+li.ico-lastfm {
+    background: url('../img/social/32x32px/lastfm.png') no-repeat top left;
+}
+
+li.ico-youtube {
+    background: url('../img/social/32x32px/youtube.png') no-repeat top left;
+}
+
+li.ico-vimeo {
+    background: url('../img/social/32x32px/vimeo.png') no-repeat top left;
+}
+
+#main {
+  *zoom: 1;
+  overflow: hidden;
+  margin-bottom: 0px;
+}
+
+#main:after {
+  visibility: hidden;
+  display: block;
+  content: "\0020";
+  height: 0;
+  clear: both;
+}
+
+#main section {
+  *display: inline;
+  float: left;
+  width: 613.333px;
+}
+
+aside {
+  *display: inline;
+  float: right;
+  width: 222.857px;
+  padding: 0 20px;
+  /*background-color: #EEE;*/
+  border-left: 1px solid #019875;
+  margin-bottom: -5000px;
+  padding-bottom: 5000px;
+}
+
+#solo #main {
+  padding: 40px;
+}
+
+#solo #main section {
+  width: 460px;
+  float: none;
+}
+
+#solo #main aside {
+  display: none;
+}
+
+#full #main section {
+  width: 100%;
+}
+
+#full #main aside {
+  display: none;
+}
+
+h1, h2, h3, h4, h5 
+{
+    margin: 5px 0;
+}
+
+h1, h2
+{
+    color: #3A3B3F;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a {
+  margin-left: 20px;
+  font-size: 12px;
+}
+
+h1 a.before, h2 a.before, h3 a.before, h4 a.before, h5 a.before {
+  margin-left: 0;
+  margin-right: 20px;
+}
+
+form fieldset {
+  margin: 20px 0;
+  margin-bottom: 40px;
+}
+
+form input.medium, form select.medium, form textarea.medium {
+  width: 160px;
+}
+
+form input.small, form select.small, form textarea.small {
+  width: 80px;
+}
+
+form .field-address {
+  position: relative;
+  top: -10px;
+  margin-bottom: 0;
+}
+
+form .field-multiselect input, form .field-multiselect select {
+  margin-right: 6px;
+}
+
+table {
+  margin: 20px;
+  margin-bottom: 40px;
+}
+
+table th {
+  width: 120px;
+  text-align: left;
+}
+
+nav {
+  *zoom: 1;
+}
+
+nav:after {
+  visibility: hidden;
+  display: block;
+  content: "\0020";
+  height: 0;
+  clear: both;
+}
+
+nav a {
+  *display: inline;
+  float: left;
+  padding: 3.333px 6.667px;
+  margin-right: 10px;
+}
+
+.pagination span {
+  *display: inline;
+  float: left;
+  padding: 3.333px 6.667px;
+  margin-right: 10px;
+}
+
+aside .button, aside button.negative, aside .negative.button, aside
+.button-negative {
+  float: none;
+}
+
+.negative.button, button.negative,
+.negative.button-negative,
+.button-negative {
+  background-color: #bb3355;
+}
+
+.code header.page-header section, .code header.page-header section { border-bottom: 1px solid #91C2C0; }
+.bike header.page-header section { border-bottom: 1px solid #019875; }
+.everything header.page-header section { border-bottom: 1px solid #A6C0C5; }
+
+.code aside, .code aside { border-left: 1px solid #91C2C0;} 
+.bike aside { border-left: 1px solid #019875; }
+.everything aside { border-left: 1px solid #A6C0C5; }
+
+.code #main-footer section, .code  #main-footer section { border-top: 1px solid #91C2C0;} 
+.bike  #main-footer section { border-top: 1px solid #019875; }
+.everything  #main-footer section { border-top: 1px solid #A6C0C5; }
+
+
+/* header */
+.branding h1, .branding h2 { text-align: right; }
+.branding h1 a { font-size: 42px; }
+.branding h2 { margin-top: -30px; }
+
+#main article header h1 {
+    line-height: 0.8;
+}
+
+.grid .item {
+	width: 181px;
+	height: 181px;
+	margin: 0 13px 13px 0;
+	float: left;
+	overflow:hidden;
+	position:relative;
+	cursor:default;
+}
+
+.grid .item:nth-child(5n+5) { margin-right: 0; }
+.grid.break3 .item:nth-child(5n+5) { margin-right: 13px; }
+.grid.break3 .item:nth-child(3n+3) { margin-right: 0; }
+
+.grid .item.bike { border-bottom: 3px solid #019875; }
+.grid .item.code, .grid .item.code { border-bottom: 3px solid #91C2C0; }
+.grid .item.everything { border-bottom: 3px solid #A6C0C5; }
+
+.grid img {
+	border:0;
+	position:absolute;
+}
+
+.item .caption 
+{
+    text-align: center;
+	width:145px;
+	height:145px;
+	padding: 18px;
+	position:absolute;
+	left:0;
+	color: #fff;
+	display:none;
+	line-height:1.1;
+}
+
+.item .caption h2 {
+    margin-top: 0;
+}
+
+.item .caption a 
+{
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    bottom:0px;
+    height:30px;
+    text-align: left;
+}
+
+.item.bike .caption {
+	background: #019875; 
+}
+
+.item.code .caption, .item.code .caption {
+    background: #91C2C0;
+}
+
+.item.everything .caption {
+    background: #A6C0C5;
+}
+
+.item .caption p {
+	font-size: 15px;
+	font-weight: 400;
+	color: #fff;
+}
+
+.clear {
+    clear: both;
+}
+
+.left { float: left; }
+.right { float: right; }
+.cent { text-align: center; }
+
+.widget-recent-blog-posts ul li 
+{
+    display: inline;
+    list-style-type: none;
+    margin-left: 0;
+    height: 50px;
+}
+
+.widget-recent-blog-posts ul li img.left {
+    padding: 2px;
+}
+
+.view-more {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    padding: 7px 20px 0px 40px;
+    height: 25px;
+}
+
+.view-more:hover {
+    background-color: #019875 !important;
+}
+
+.view-more a, .view-more a:active, .view-more a:visited 
+{
+    text-decoration: none;
+    color: #fff
+}
+
+.view-more a:hover {
+    text-decoration: underline;
+}

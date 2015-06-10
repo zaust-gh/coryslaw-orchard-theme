@@ -1,0 +1,41 @@
+﻿@using Orchard.ContentManagement
+
+@{
+    IEnumerable<object> posts =
+        Model.ContentItems.ContentItems;
+
+    Script.Include("jquery.qtip.min.js").AtFoot();
+    Style.Include("jquery.qtip.min.js").AtFoot();
+}
+
+@using(Script.Foot())
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('[data-tooltip!=""]').qtip({
+                content: {
+                    attr: 'data-tooltip'
+                },
+                style: {
+                    classes: 'qtip-rounded qtip-shadow qtip-tipsy'
+                },
+                position: { my: 'bottom center', at: 'top center' }
+            });
+        });
+    </script>
+}
+
+<ul>
+    @{
+        var count = 0;
+        foreach (dynamic post in posts)
+        {
+            var blogPostPart = post.ContentItem.BlogPostPart;
+            <li>
+                <a href="@Url.ItemDisplayUrl((ContentItem)post.ContentItem)"><img data-tooltip="@blogPostPart.Title" class="left" width="50px" height="50px" src="@Url.Content((string)blogPostPart.FeaturedThumbnail.MediaParts[0].MediaUrl)" alt="@blogPostPart.Title"/></a>
+            </li>
+       
+            count++;
+        }
+    }
+</ul>

@@ -1,0 +1,7 @@
+﻿Name: Corys Law
+Author: Carl Woodhouse
+Description: theme for coryslaw.com
+Version: 1.4.1
+Tags: Awesome
+Website: http://coryslaw.com
+Zones: Header, AsideFirst, Content, MainAfterContent, Footer

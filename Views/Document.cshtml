@@ -1,0 +1,21 @@
+﻿@using Orchard.Mvc.Html;
+@{
+   // RegisterLink(new LinkEntry {Type = "image/x-icon", Rel = "shortcut icon", Href = Url.Content("~/modules/orchard.themes/Content/orchard.ico")});
+    Script.Include("html5.js").UseCondition("lt IE 9").AtHead();
+
+    string title =  Convert.ToString(Model.Title);
+    var fullTitle = string.Concat(title, !string.IsNullOrEmpty(title) ? " | " : string.Empty, "coryslaw.com").ToLower();
+    var bodyId = Layout.BodyId;
+}
+<!DOCTYPE html> 
+<html lang="@WorkContext.CurrentCulture" class="static @Html.ClassForPage((string)Layout.PageClass)"> 
+    <head> 
+        <meta charset="utf-8" />
+        <title>@fullTitle</title> 
+        @Display(Model.Head)
+    </head>
+    <body id="@bodyId">
+        @Display(Model.Body)
+        @Display(Model.Tail)
+    </body>
+</html>

@@ -1,0 +1,64 @@
+﻿@{
+    /* Lets set some classes */
+    Layout.BodyId = Model.AsideFirst != null ? string.Empty : !string.IsNullOrEmpty((string)Layout.BodyId) ? Layout.BodyId : "full";
+
+    /* Global includes for the theme
+    ***************************************************************/
+    
+    SetMeta("X-UA-Compatible", "IE=edge,chrome=1");
+    Style.Include("styles.css");
+
+    Script.Include("http://use.typekit.com/vyh1iho.js").AtHead();
+    using(Script.Head()) {
+            <script type="text/javascript">try { Typekit.load(); } catch (e) { }</script>
+    }
+    Script.Require("jQuery").AtFoot();
+    Script.Require("jQueryUI").AtFoot();
+    Script.Include("cw.main.js").AtFoot();
+
+    /* Some useful shortcuts or settings
+    ***************************************************************/
+
+    Func<dynamic, dynamic> Zone = x => Display(x); // Zone as an alias for Display to help make it obvious when we're displaying zones
+
+    /* Inserting some ad hoc shapes
+    ***************************************************************/
+
+    WorkContext.Layout.Header.Add(New.Branding(), "5"); // Site name and link to the home page
+    //WorkContext.Layout.Footer.Add(New.BadgeOfHonor(), "5"); // Powered by Orchard
+    //WorkContext.Layout.Footer.Add(New.User(), "10"); // Login and dashboard links
+}
+           
+@if (Model.Header != null)
+{
+    <header class="page-header">
+        @Zone(Model.Header)
+    </header>
+}
+    
+<section id="main">
+        @if (Model.Content != null)
+        {
+            <section>
+                @Zone(Model.Content)
+                @Zone(Model.MainAfterContent)
+            </section>
+        }
+        
+        @if (Model.AsideFirst != null) 
+        {
+            <aside>
+                @Zone(Model.AsideFirst)
+            </aside>
+        }
+</section>
+
+<footer id="main-footer">
+	@if (Model.Footer != null)
+	{
+			// the actual footer will probably be a html widget
+			<section>
+				@Zone(Model.Footer)
+			</section>
+	}
+</footer>

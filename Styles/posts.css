@@ -1,0 +1,20 @@
+﻿
+.blog-post .alignright
+{
+    float: right;
+    padding: 10px 0 10px 10px;
+}
+
+.blog-post .alignleft
+{
+    float: left;
+    padding: 10px 10px 10px 0;
+}
+
+.content-item.blog-post p.tags {
+    padding: 0px;
+}
+
+.content-item.blog-post p {
+    padding-bottom: 15px
+}
