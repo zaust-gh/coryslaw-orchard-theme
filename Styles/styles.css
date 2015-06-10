@@ -480,6 +480,10 @@ li.ico-vimeo {
     background: url('../img/social/32x32px/vimeo.png') no-repeat top left;
 }
 
+li.ico-tumblr {
+    background: url('../img/social/32x32px/tumblr.png') no-repeat top left;
+}
+
 #main {
   *zoom: 1;
   overflow: hidden;
