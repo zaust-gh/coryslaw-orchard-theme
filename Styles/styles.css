@@ -346,13 +346,13 @@ h6 {
 }
 
 a, a:visited, a:active {
-    color: #019875;
+    color: #FF5721;
     text-decoration: none;
 }
 
 a:hover 
 {
-    color: #019875;
+    color: #FF5721;
     text-decoration: underline;
 }
 
@@ -410,7 +410,7 @@ section {
 }
 
 header.page-header section {
-    border-bottom: 1px solid #019875;
+    border-bottom: 1px solid #FF5721;
 }
 
 header.page-header a
@@ -431,7 +431,7 @@ footer {
 }
 
 #main-footer section {
-	border-top: 1px solid #019875;
+	border-top: 1px solid #FF5721;
 	width: 960px;
 	margin-left: auto;
 	margin-right: auto;
@@ -506,7 +506,7 @@ aside {
   width: 222.857px;
   padding: 0 20px;
   /*background-color: #EEE;*/
-  border-left: 1px solid #019875;
+  border-left: 1px solid #FF5721;
   margin-bottom: -5000px;
   padding-bottom: 5000px;
 }
@@ -623,15 +623,15 @@ aside .button, aside button.negative, aside .negative.button, aside
 }
 
 .code header.page-header section, .code header.page-header section { border-bottom: 1px solid #91C2C0; }
-.bike header.page-header section { border-bottom: 1px solid #019875; }
+.bike header.page-header section { border-bottom: 1px solid #FF5721; }
 .everything header.page-header section { border-bottom: 1px solid #A6C0C5; }
 
 .code aside, .code aside { border-left: 1px solid #91C2C0;} 
-.bike aside { border-left: 1px solid #019875; }
+.bike aside { border-left: 1px solid #FF5721; }
 .everything aside { border-left: 1px solid #A6C0C5; }
 
 .code #main-footer section, .code  #main-footer section { border-top: 1px solid #91C2C0;} 
-.bike  #main-footer section { border-top: 1px solid #019875; }
+.bike  #main-footer section { border-top: 1px solid #FF5721; }
 .everything  #main-footer section { border-top: 1px solid #A6C0C5; }
 
 
@@ -658,7 +658,7 @@ aside .button, aside button.negative, aside .negative.button, aside
 .grid.break3 .item:nth-child(5n+5) { margin-right: 13px; }
 .grid.break3 .item:nth-child(3n+3) { margin-right: 0; }
 
-.grid .item.bike { border-bottom: 3px solid #019875; }
+.grid .item.bike { border-bottom: 3px solid #FF5721; }
 .grid .item.code, .grid .item.code { border-bottom: 3px solid #91C2C0; }
 .grid .item.everything { border-bottom: 3px solid #A6C0C5; }
 
@@ -695,7 +695,7 @@ aside .button, aside button.negative, aside .negative.button, aside
 }
 
 .item.bike .caption {
-	background: #019875; 
+	background: #FF5721; 
 }
 
 .item.code .caption, .item.code .caption {
@@ -741,7 +741,7 @@ aside .button, aside button.negative, aside .negative.button, aside
 }
 
 .view-more:hover {
-    background-color: #019875 !important;
+    background-color: #FF5721 !important;
 }
 
 .view-more a, .view-more a:active, .view-more a:visited 
